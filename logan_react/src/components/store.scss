@@ -1,0 +1,123 @@
+.banner-content{
+  position: absolute;
+  transform: translate(250px, -250px);
+  text-align: center;
+}
+.img{
+  height: auto;
+  width: auto;
+}
+.hold{
+  padding: 50px;
+}
+.listings:hover{
+  color: #fc82dd;
+  font-style: italic;
+  align-self: center;
+  transition: color, 0.3s;
+}
+
+.hr-custom {
+  border: 1px solid #f5ddef !important;
+  width: 95%;
+  margin: 20px auto;
+}
+
+.row {
+  text-align: center !important;
+}
+
+.slides-section {
+  margin-bottom: 100px !important;
+  max-height: 400px !important;
+  position: relative;
+}
+
+.bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80vh;
+  background-size: cover;
+  background-position: center;
+  will-change: opacity;
+  background-repeat: no-repeat;
+  margin-top: -100px;
+}
+
+.product-row {
+  margin: 0 auto !important;
+  text-align: center !important;
+}
+
+.seperate-sections {
+  background: #fff;
+  height: 28em;
+  width: 100%;
+  padding: 50px;
+}
+
+.products-section {
+  background-color: #fff;
+}
+
+.skin-care-heading {
+  text-align: center;
+  margin: 30px auto;
+}
+
+// <<<<<<< CAROUSEL >>>>>>>
+.carousel-parent {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.caption-bg {
+  // margin: 0 auto !important;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.carousel-control-prev {
+  width: 10% !important;
+  height: 70%;
+}
+.carousel-control-next {
+  width: 10% !important;
+  height: 70%;
+}
+
+.carousel-img {
+  max-height: 200px !important;
+  max-width: 200px !important;
+  border-radius: 15px;
+  text-align: center;
+  background-size: contain;
+  object-fit: cover;
+  margin: 0 auto !important;
+}
+
+
+// media queries
+@media(max-width: 767px) {
+  .bg {
+    height: 35vh !important;
+  }
+  .seperate-sections {
+    padding: 0 !important;
+    height: 10em !important;
+  }
+}
+
+@media(min-width: 768px) and (max-width: 1023px){
+  .bg {
+    height: 40vh !important;
+  }
+  .seperate-sections {
+    height: 10em !important;
+  }
+}

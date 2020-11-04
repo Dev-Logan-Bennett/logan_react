@@ -1,0 +1,218 @@
+// @import url("https://fonts.googleapis.com/css?family=Poppins:300,400,600,800&display=swap");
+
+$red: #e20001;
+$black: #191919;
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Roboto, sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+header {
+  height: 100px;
+  
+  .inner-header {
+    position: fixed;
+    display: flex;
+    z-index: 10;
+    height: 100px;
+    padding-right: 20px;
+    padding-left: 20px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    .logo a {
+      font-weight: 700;
+      font-size: 1rem;
+      text-decoration: none;
+      color: $black;
+    }
+    .menu {
+      button {
+        border: none;
+        background: none;
+        outline: none;
+        cursor: pointer;
+        font-size: 0.8rem;
+        mix-blend-mode: difference;
+        padding-right: 30px;
+      }
+    }
+  }
+}
+.hamburger-menu {
+  display: none;
+  z-index: 9;
+  top: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  overflow: scroll;
+  
+  .menu-secondary-background-color {
+    background: $black;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+  }
+  .menu-layer {
+    position: relative;
+    background:rgb(46, 178, 187);
+    max-height: auto;
+    max-width: 100%;
+
+    .menu-city-background {
+      top: 0;
+      left: 0;
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      opacity: 0;
+      background-size: contain;
+      animation-name: backgroundEffect;
+      animation-duration: 30s;
+      animation-iteration-count: infinite;
+      object-fit: cover;
+      background-repeat: no-repeat !important;
+    }
+    .menu-links {
+      position: absolute;
+      top: 150px;
+      left: 0;
+      padding-left: 30px;
+      padding-right: 30px;
+
+      nav {
+        ul {
+          margin: 0;
+          padding: 0;
+          text-align: left;
+          li {
+            display: flex;
+            flex-wrap: nowrap !important;
+            list-style: none;
+            font-size: 400%;
+            font-weight: 700;
+            cursor: pointer;
+            width: 100%;
+            a {
+              color: #fff;
+              text-decoration: none;
+              &:hover {
+                color: $black;
+              }
+            }
+          }
+        }
+      }
+      .info {
+        color: #fff;
+        h3 {
+          font-size: 1.4rem;
+          // margin: 8px auto;
+        }
+      }
+    }
+  }
+  .locations {
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    margin-left: 25%;
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: 600;
+    span {
+      cursor: pointer;
+      &:first-child {
+        margin-left: 64px;
+      }
+      font-weight: 400;
+      margin: 0 32px;
+      transition: 0.3s ease-in-out;
+      &:hover {
+        color: #fff;
+        background: $black;
+        // padding: 8px 24px;
+        border-radius: 4px;
+      }
+    }
+  }
+}
+
+@keyframes backgroundEffect {
+  0% {
+    background-position: 0% 0%;
+  }
+  25% {
+    background-position: 40% 10%;
+  }
+  50% {
+    background-position: 0 10%;
+  }
+  75% {
+    background-position: 10% 40%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+// <<<<< HEADER MEDIA QUERIES>> 
+@media (max-width: 767px) {
+  header {
+    padding: 0 !important;
+  }
+
+  .inner-header {
+    display: flex;
+    height: 60px !important;
+    align-items:  flex-end !important;
+  }
+
+  .menu-links {
+    top: 60px !important;
+  }
+  .menu-links nav {
+    margin-bottom: 40px;
+  }
+
+  .menu-links nav ul li {
+    font-size: 300% !important;
+  }
+
+  .menu-layer {
+    min-height: 43em;
+  }
+
+  .info {
+    // 
+  }
+  .hamburger-menu {
+    bottom: 5%;
+  }
+
+  .locations {
+    margin-left: 5% !important;
+    position: absolute;
+    bottom: 2% !important;
+  }
+}
+
+@media(min-width: 768px) and (max-width: 1024px){
+  .locations {
+    bottom: 75px !important;
+  }
+}

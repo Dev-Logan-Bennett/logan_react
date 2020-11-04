@@ -1,0 +1,211 @@
+/* .bg{
+  /* background-image: url("https://c8.alamy.com/comp/2A4W09G/ingredients-for-the-healthy-foods-background-mixed-nuts-honey-berries-fruits-blueberry-orange-almonds-oatmeal-and-chia-seeds-the-concept-of-he-2A4W09G.jpg"); */
+  /* background-image: url("https://thumbs.dreamstime.com/z/natural-organic-skincare-products-concrete-background-top-view-copy-space-green-beauty-care-soap-essential-oils-bath-144381971.jpg");
+  background-color: rgb(0,0,0,.5);
+  height: 800px;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+} 
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.fronttext{
+  color: rgb(231, 123, 208);
+} */
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+
+:root {
+	--primary-color: #3a4052;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	line-height: 1.5;
+}
+
+a {
+	text-decoration: none;
+	color: var(--primary-color);
+}
+
+h1 {
+	font-weight: 300;
+	font-size: 60px;
+	line-height: 1.2;
+	margin-bottom: 15px;
+}
+
+.video-section {
+	height: 72vh !important;
+	width: 100%;
+	position: relative;
+	background: var(--primary-color) url('https://traversymedia.com/downloads/cover.jpg') no-repeat center center/cover;
+	object-fit: cover;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.showcase {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+
+video.welcome-video {
+	width: 100%    !important;
+  height: auto   !important;
+	display: block;
+	object-fit: cover;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+
+.video-section:after {
+	content: '';
+	z-index: 1;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	background: rgba(0, 0, 0, 0.5);
+	position: absolute;
+}
+
+.content {
+	color: #fff;
+	z-index: 2;
+	
+	text-align: center;
+
+	h1 {
+		font-size: 45px;
+	}
+	
+	h3 {
+		font-size: 25px !important;
+	}
+}
+
+.btn:hover {
+	transform: scale(0.98);
+}
+
+section.about {
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0 10px 0px 10px;
+	margin-top: 40px !important;
+	background-color: #fff;
+	margin-bottom: 60px !important;
+
+	p {
+		margin: 35px auto;
+	}
+}
+
+.about_message {
+	text-align: center;
+	margin: 0 auto;
+
+	h1 {
+		font-size: 40px;
+		margin: auto 20px;
+	}
+	
+	h2 {
+		font-size: 25px;
+		color: var(--primary-color);
+	}
+
+	.about p {
+		font-size: 1.2rem;
+		margin: 45px 20px !important;
+		max-width: 600px;
+	}
+}
+
+.social .fa {
+	font-size: 45px;
+}
+
+.ending-hr {
+	border: 2px solid #3A4052;
+	margin: 40px auto;
+	width: 200px;
+	border-radius: 2px;
+	// margin-bottom: 4em !important;
+}
+
+.social a {
+	margin: 0 10px;
+}
+// <<<<< HOME MEDIA QUERIES  >>>>>
+
+@media (max-width: 768px){
+	.video-section {
+		height: 27.5vh !important;
+	}
+
+	.content {
+		text-align: center;
+
+		h1 {
+			font-size: 25px;
+		}
+
+		h3 {
+			font-size: 15px !important;
+		}
+	}
+
+	.about h1 {
+		font-size: 30px;
+	}
+
+	.social .fa {
+		font-size: 40px;
+	}
+
+	.about_message {
+		h1 {
+			font-size: 30px;
+			margin: auto 20px;
+		}
+
+		p {
+			margin: 35px 20px;
+		}
+
+		h2 {
+			font-size: 22px;
+		}
+	}
+
+	section.about {
+		background-color: #fff;
+		margin-bottom: 60px !important;
+	}
+
+	.social .fa {
+		font-size: 30px;
+	}
+}
+
